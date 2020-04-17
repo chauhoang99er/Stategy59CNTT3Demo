@@ -5,9 +5,12 @@
  */
 package stategy59cntt3demo;
 
+import duck.DonaldDuck;
 import duck.Duck;
 import duck.MallardDuck;
+import fly.FlyNoWings;
 import fly.FlyWithWings;
+import quack.MuteQuack;
 import quack.SQueak;
 
 /**
@@ -21,10 +24,15 @@ public class Stategy59CNTT3Demo {
      */
     public static void main(String[] args) 
     {
-        Duck duck = new MallardDuck ();
-        duck.setFlyBehavior(new FlyWithWings());
-        duck.setQuackBehavior(new SQueak());
-        System.out.println(duck.display());
+        Duck duck1 = new MallardDuck ();
+        duck1.setFlyBehavior(new FlyWithWings());
+        duck1.setQuackBehavior(new SQueak());
+        System.out.println(duck1.display());
+        
+        Duck duck2 = new DonaldDuck ();
+        duck2.setFlyBehavior(new FlyNoWings());
+        duck2.setQuackBehavior(new MuteQuack());
+        System.out.println(duck2.display());
     }
     
 }
